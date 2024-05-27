@@ -11,8 +11,20 @@ const AddGroup = ({ addGroup }) => {
     }
   };
 
+   // State to manage form visibility
+   const [isFormVisible, setFormVisible] = useState(false);
+
+   // Event handler to toggle form visibility
+   const toggleFormVisibility = () => {
+     setFormVisible(!isFormVisible);
+   };
+
   return (
     <div className='addGroup'>
+    <button onClick={toggleFormVisibility}>
+        {isFormVisible ? 'Hide Form' : 'Create New Group'}
+      </button>
+      {isFormVisible && (
     <form onSubmit={handleSubmit} className="add-group-form">
       <input
         type="text"
@@ -22,6 +34,7 @@ const AddGroup = ({ addGroup }) => {
       />
       <button type="submit">Add Group</button>
     </form>
+      )}
     </div>
   );
 };
