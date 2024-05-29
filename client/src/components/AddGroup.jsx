@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../App.css'
 
 const AddGroup = ({ addGroup }) => {
   const [name, setName] = useState('');
@@ -22,7 +23,7 @@ const AddGroup = ({ addGroup }) => {
   return (
     <div className='addGroup'>
     <button onClick={toggleFormVisibility}>
-        {isFormVisible ? 'Hide Form' : 'Create New Group'}
+        {isFormVisible ? 'Cancel' : 'Create New Group'}
       </button>
       {isFormVisible && (
     <form onSubmit={handleSubmit} className="add-group-form">
@@ -30,7 +31,7 @@ const AddGroup = ({ addGroup }) => {
         type="text"
         value={name}
         onChange={(e) => setName(e.target.value)}
-        placeholder="Add new group"
+        placeholder="Group name"
       />
       <button type="submit">Add Group</button>
     </form>

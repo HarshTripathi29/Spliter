@@ -1,13 +1,11 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family :Verdana, Geneva, Tahoma, sans-serif;
   background-color: #121212;
   margin: 0;
   padding: 0;
 }
 
 .app {
-
-
 }
 
 header {
@@ -15,84 +13,90 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: rgb(9, 9, 9);
-  border-bottom : 2px solid rgb(0, 255, 119);
-  color : rgb(0, 255, 119);
-  padding : 8px 5px;
-  width : 100%;
+  border-bottom: 2px solid rgb(0, 255, 119);
+  color: rgb(0, 255, 119);
+  padding: 8px 5px;
+  width: 100%;
 }
 
 h1 {
   margin: 0;
 }
 
-
-.addGroup{
-width : 100vw;
-display: flex;
-justify-content: center;
-align-items: center;
-padding : 20px;
-background-color: rgb(9, 9, 9);
-}
-
-form {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+.addGroup {
+  padding: 10px 0;
   background-color: rgb(9, 9, 9);
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 12vw;
 }
 
-.add-group-form{
+.add-group-form {
   height: 20vh;
-  width : 20vw;
+  width: 20vw;
   border: none;
   border-radius: 10px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 10px rgb(0, 255, 119);
+  border: 1px solid rgb(0, 255, 119);
+  position: absolute;
+  background-color: #121212;
+  box-shadow: #2b2b2b;
+  top: 40vh;
+  left: 40vw;
+}
+
+.homeButtons {
+  display: flex;
+  flex-direction: column;
 }
 
 input {
   padding: 10px;
-  margin-right: 5px;
+  margin: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #2b2b2b;
-  color : white;
+  color: white;
 }
 
 button {
+  font-size: 1rem;
   padding: 10px;
-  border: 1px solid rgb(0, 255, 119);;
-  border-radius: 12px;
-  background-color: rgb(9, 9, 9);
-  color: white;
+  background-color: rgb(0, 255, 119);
+  color: rgb(9, 9, 9);
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #303030;
+  background-color: rgb(0, 255, 119);
 }
 
 .dashboard {
-  padding: 20px;
-  background-color:rgb(9, 9, 9);
-  color : white;
+  padding: 10px 160px;
+  background-color: rgb(9, 9, 9);
+  color: white;
 }
 
 .group-cards {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  color : white;
+  color: white;
+  border: none;
 }
 
 .group-card {
   background-color: rgb(9, 9, 9);
   padding: 20px;
-  border-radius: 5px;
+  border: 1px solid rgb(0, 255, 119);
+  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 12vw;
   box-sizing: border-box;
@@ -107,43 +111,40 @@ button:hover {
 
 .group {
   padding: 20px;
-  margin : 10px;
+  margin: 10px;
   background-color: rgb(9, 9, 9);
   border-radius: 5px;
   margin-bottom: 20px;
-  color : white;
+  color: white;
 }
 
-
-.addMember{
- 
+.addMember {
 }
 
-.add-member-form{
-  
+.add-member-form {
 }
 
 h2 {
   margin-top: 0;
 }
 
-.addTransaction{
-background-color: rgb(9, 9, 9);
+.addTransaction {
+  background-color: rgb(9, 9, 9);
 }
 
-.add-transaction-form{
+.add-transaction-form {
   background-color: rgb(9, 9, 9);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 10px 0px;
+  margin: 10px 0;
 }
 
-.transactionTitle{
-  margin: 10px 0px;
+.transactionTitle {
+  margin: 10px 0;
 }
 
-.add-member-form{
+.add-member-form {
   background-color: rgb(9, 9, 9);
 }
 
@@ -161,13 +162,13 @@ background-color: rgb(9, 9, 9);
   margin-right: 10px;
 }
 
-.member-contribution input{
+.member-contribution input {
   padding: 10px;
   margin-right: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: rgb(9, 9, 9);
-  color : white;
+  color: white;
 }
 
 .settlement {
@@ -182,29 +183,33 @@ background-color: rgb(9, 9, 9);
 
 .balance ul {
   list-style: none;
-  padding: 0;
+  background-color: rgb(0, 255, 119);
+  color: rgb(9, 9, 9);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
 }
 
 .balance ul li {
-  margin-left: 20px;
+  margin-left: 5px;
 }
-
 
 .App-main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 80px);
-  padding: 20px;
-  color : white;
+  height: calc(100vh - 180px);
+  padding: 0;
+  color: white;
   background-color: rgb(9, 9, 9);
+  border: none;
 }
 
 .content {
   display: flex;
   width: 80%;
   max-width: 1200px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .text-section {
@@ -215,25 +220,13 @@ background-color: rgb(9, 9, 9);
 .headline h2 {
   font-size: 2rem;
   margin-bottom: 20px;
+ 
+  font-weight: 900;
 }
 
 .description p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-.get-started button {
-  font-size: 1rem;
-  padding: 10px 20px;
-  background-color: rgb(0, 255, 119);
-  color: rgb(9, 9, 9);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.get-started button:hover {
-  background-color: #0056b3;
+  font-size: 1 rem;
+  margin-bottom: 10px;
 }
 
 .image-section {
@@ -247,4 +240,64 @@ background-color: rgb(9, 9, 9);
   max-width: 100%;
   height: auto;
   border-radius: 10px;
+}
+
+/* Media queries for mobile screens */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgb(0, 255, 119);
+    color :rgb(9, 9, 9);
+    margin: 0;
+  }
+
+  .addGroup {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(0, 255, 119);
+    color :rgb(9, 9, 9);
+  }
+
+  .add-group-form {
+    width: 90vw;
+    left: 5vw;
+  }
+
+  .dashboard {
+    padding: 10px 20px;
+  }
+
+  .group-card {
+    width: 100%;
+  }
+
+  .member-contribution {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .App-main {
+    flex-direction: column;
+    padding: 2px 15px;
+    background-color: rgb(0, 255, 119);
+    color :rgb(9, 9, 9);
+  }
+
+  .content {
+    flex-direction :column-reverse;
+    width: 100%;
+  }
+
+  .image-section {
+    margin-top: 0px;
+  }
+
+  .get-started button{
+    width : 84vw;
+    border-radius: 0;
+    color: rgb(0, 255, 119);
+    background-color :rgb(9, 9, 9);
+  }
 }

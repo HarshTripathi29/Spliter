@@ -22,7 +22,7 @@ const AddTransaction = ({ members, addTransaction }) => {
         type="text"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
-        placeholder="Transaction title"
+        placeholder="Purpose"
         className='transactionTitle'
       />
       {members.map((member) => (
