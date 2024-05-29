@@ -9,14 +9,14 @@ const Logout = () => {
   const handleLogout = async () => {
     try {
       await signOut(auth);
-      navigate('/login'); // Redirect to login page after logout
+      navigate('/'); // Redirect to home page after logout
     } catch (error) {
       console.error("Error signing out: ", error);
     }
   }
 
   return (
-    <button onClick={handleLogout} className='button'>
+    <button onClick={handleLogout} className='logout-button'>
       Logout
     </button>
   );

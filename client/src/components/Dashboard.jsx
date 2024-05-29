@@ -4,7 +4,8 @@ import GroupCard from './GroupCard';
 import AddGroup from './AddGroup';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../utils/firebase';
-import '../App.css'
+import '../App.css';
+import spliter from '../assets/spliter.png';
 
 const Dashboard = ({ groups, addGroup }) => {
 
@@ -30,10 +31,10 @@ const Dashboard = ({ groups, addGroup }) => {
         <div className="content">
           <div className="text-section">
             <div className="headline">
-              <h2>Split Bills, Not Friendship</h2>
+              <h2>Split Bills, Not Friendships</h2>
             </div>
             <div className="description">
-              <p>We help group of peopple split expenses and bills when theyare sharing costs for a particular event or acticity.</p>
+              <p>We help group of people split expenses and bills when they are sharing costs for a particular event or acticity.</p>
             </div>
             <div className="get-started">
             {user ?  
@@ -48,8 +49,8 @@ const Dashboard = ({ groups, addGroup }) => {
           </div>
           <div className="image-section">
             <img 
-              src="https://img.freepik.com/premium-vector/happy-people-drinking-friends-party-cocktail-drinks-people-hands-students-friendship-cartoon-persons-clinking-glasses-decent-vector-concept_53562-16798.jpg?w=740" 
-              alt="Happy people drinking"
+              src={spliter}
+              alt="Happy people"
             />
           </div>
         </div>

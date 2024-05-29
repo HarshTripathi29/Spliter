@@ -11,12 +11,17 @@ body {
 header {
   display: flex;
   justify-content: space-between;
+
+  font-family: "Anta", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
   align-items: center;
   background-color: rgb(9, 9, 9);
   border-bottom: 2px solid rgb(0, 255, 119);
   color: rgb(0, 255, 119);
-  padding: 8px 15px;
-  width: 100%;
+  padding:5px 10px;
+  width: calc(100vw-20px);
 }
 
 h1 {
@@ -153,6 +158,7 @@ h2 {
 
 .add-member-form {
   background-color: rgb(9, 9, 9);
+  padding-left: 0px;
 }
 
 .member-contribution {
@@ -193,7 +199,7 @@ h2 {
   list-style: none;
   background-color: rgb(0, 255, 119);
   color: rgb(9, 9, 9);
-  padding: 10px;
+  padding: 5px;
   border: none;
   border-radius: 5px;
   margin: 5px;
@@ -225,16 +231,25 @@ h2 {
   padding: 20px;
 }
 
-.headline h2 {
+
+.headline {
   font-size: 2rem;
-  margin-bottom: 20px;
- 
+  font-family: "Courier Prime", monospace;
   font-weight: 900;
+  font-style: normal;
+  margin-bottom: 2px;
+  font-weight: 900;
+  padding-top: 30px;
+}
+
+.headline h2{
+  margin-bottom : 0px;
 }
 
 .description p {
   font-size: 1 rem;
   margin-bottom: 10px;
+
 }
 
 .image-section {
@@ -341,7 +356,12 @@ h2 {
   }
 
   .headline{
-  
+    padding-top: 2px;
+    font-size: 20px;
+  }
+
+  .description{
+    padding-top: 0px;
   }
 
   .image-section {
@@ -351,7 +371,7 @@ h2 {
   .get-started button{
     width : 84vw;
     border-radius: 0;
-    color: rgb(0, 255, 119);
+    color: #00ff77;
     background-color :rgb(9, 9, 9);
   }
 
@@ -371,5 +391,11 @@ h2 {
     background-color: rgb(9, 9, 9);
     padding : 10px;
     border : none;
+  }
+
+  .logout-button{
+    border : 1px solid rgb(9, 9, 9);
+    padding : 5px;
+    margin-top : 5px;
   }
 }
