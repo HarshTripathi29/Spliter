@@ -20,6 +20,7 @@ const Group = ({ group, setGroups, groups }) => {
 
   return (
     <div className="group">
+    
       <h2>{group.name}</h2>
       <AddMember addMember={addMember} />
       <AddTransaction members={group.members} addTransaction={addTransaction} />

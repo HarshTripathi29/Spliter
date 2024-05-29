@@ -1,6 +1,6 @@
 body {
   font-family :Verdana, Geneva, Tahoma, sans-serif;
-  background-color: #121212;
+  background-color: rgb(9, 9, 9);
   margin: 0;
   padding: 0;
 }
@@ -15,7 +15,7 @@ header {
   background-color: rgb(9, 9, 9);
   border-bottom: 2px solid rgb(0, 255, 119);
   color: rgb(0, 255, 119);
-  padding: 8px 5px;
+  padding: 8px 15px;
   width: 100%;
 }
 
@@ -50,6 +50,12 @@ h1 {
   left: 40vw;
 }
 
+.add-group-form-button{
+  background-color: rgb(0, 255, 119);
+  color :rgb(9, 9, 9);
+
+}
+
 .homeButtons {
   display: flex;
   flex-direction: column;
@@ -62,6 +68,7 @@ input {
   border-radius: 5px;
   background-color: #2b2b2b;
   color: white;
+  width : 200px;
 }
 
 button {
@@ -154,12 +161,13 @@ h2 {
   margin-bottom: 10px;
   background-color: rgb(9, 9, 9);
   width: 20vw;
-  display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
 
 .member-contribution label {
   margin-right: 10px;
+  padding: 10px;
 }
 
 .member-contribution input {
@@ -242,10 +250,34 @@ h2 {
   border-radius: 10px;
 }
 
+.login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top : 15vh;
+}
+
+.login-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color : white;
+  border : 2px solid rgb(0, 255, 119);
+  border-radius: 10px;
+  width : 23vw;
+  background-color: rgb(9, 9, 9);
+  padding : 10px;
+}
+
+.login-heading{
+  margin-bottom : 10px;
+}
+
 /* Media queries for mobile screens */
 @media (max-width: 768px) {
   header {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     background-color: rgb(0, 255, 119);
     color :rgb(9, 9, 9);
@@ -254,33 +286,50 @@ h2 {
 
   .addGroup {
     width: 100%;
-    padding: 10px;
     background-color: rgb(0, 255, 119);
     color :rgb(9, 9, 9);
+    padding : 10px 0px ;
   }
 
   .add-group-form {
     width: 90vw;
     left: 5vw;
+    background-color: rgb(9, 9, 9);
   }
 
+  .add-group-form-button{
+    background-color: rgb(0, 255, 119);
+    color :rgb(9, 9, 9);
+    
+  }
   .dashboard {
     padding: 10px 20px;
   }
 
+
+  .group-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .group-card {
-    width: 100%;
+    width: 84vw;
+    background-color: rgb(9, 9, 9);
+    padding: 5px 10px;
   }
 
   .member-contribution {
     width: 100%;
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     align-items: flex-start;
   }
 
   .App-main {
     flex-direction: column;
-    padding: 2px 15px;
+    padding: 2px 5px;
     background-color: rgb(0, 255, 119);
     color :rgb(9, 9, 9);
   }
@@ -288,6 +337,11 @@ h2 {
   .content {
     flex-direction :column-reverse;
     width: 100%;
+    
+  }
+
+  .headline{
+  
   }
 
   .image-section {
@@ -299,5 +353,23 @@ h2 {
     border-radius: 0;
     color: rgb(0, 255, 119);
     background-color :rgb(9, 9, 9);
+  }
+
+  .settlement{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login{
+    padding-top : 5vh;
+    padding-bottom : 5vh;
+    background-color: rgb(9, 9, 9);
+  }
+
+  .login-form{
+    width : 83vw;
+    background-color: rgb(9, 9, 9);
+    padding : 10px;
+    border : none;
   }
 }

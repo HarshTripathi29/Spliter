@@ -33,7 +33,7 @@ const AddGroup = ({ addGroup }) => {
         onChange={(e) => setName(e.target.value)}
         placeholder="Group name"
       />
-      <button type="submit">Add Group</button>
+      <button type="submit" className='add-group-form-button'>Add Group</button>
     </form>
       )}
     </div>

@@ -1,10 +1,28 @@
-import React from 'react';
+import React , {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import GroupCard from './GroupCard';
 import AddGroup from './AddGroup';
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from '../utils/firebase';
 import '../App.css'
 
 const Dashboard = ({ groups, addGroup }) => {
+
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUser(user);
+      } else {
+        setUser(null);
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+
   return (
     <div>
      <div>
@@ -17,10 +35,13 @@ const Dashboard = ({ groups, addGroup }) => {
             <div className="description">
               <p>We help group of peopple split expenses and bills when theyare sharing costs for a particular event or acticity.</p>
             </div>
-            
-           
             <div className="get-started">
-              <button>Get Started</button>
+            {user ?  
+            (
+            <> </>
+            ):(
+              <Link to="/login"><button>Get Started</button></Link>
+            )} 
               <AddGroup addGroup={addGroup} />
             </div>
            
